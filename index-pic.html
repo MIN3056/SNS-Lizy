@@ -8,16 +8,46 @@
     <title>Document</title>
 
     <style>
+        @font-face {
+            font-family: noto sans kr;
+            src: url(./fonts/NotoSansKR.ttf);
+        }
+        @font-face {
+            font-family: pacifico;
+            src: url(./fonts/Pacifico.ttf);
+        }
        :root{
-        --main-color:#a3cca3;
-        --back-color:#fff;
-        --point-color:#b5d692;
-        --gray222: #222;
-        --gray444: #444;
-        --gray666: #666;
-        --gray999: #999;
-        --grayaaa:#aaa;
+            font-family: noto sans kr;
+            --main-color:#a3cca3;
+            --back-color:#fff;
+            --point-color:#b5d692;
+            --gray222: #222;
+            --gray444: #444;
+            --gray666: #666;
+            --gray999: #999;
+            --grayaaa:#aaa;
        }
+ 
+       .intro{
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;            
+            font-family: pacifico;
+            align-items: center;
+            animation: ani-show 1s 1.5s 1 reverse forwards;
+            background: var(--back-color);
+        }
+        @keyframes ani-show{
+            0%{opacity: 0;}
+            100%{opacity: 1;}
+        } 
+        .intro img{
+            width: 150px;
+        }
        .skip-menu a{
             position:fixed;
             left:50%;
@@ -38,11 +68,14 @@
             position: relative;
             display: grid;
             grid-template-columns: 1fr 2fr 1fr;
+            width: 100%;
+            padding-bottom: 100px;
+            border-bottom: 2px solid var(--point-color);
         }
         .footer{
             bottom: 10%;
             display: none;
-            border-top: 2px solid var(--main-color);
+            border-top: 2px solid var(--point-color);
         }
        
         .logo img{
@@ -59,6 +92,7 @@
             top: 30px;
             width: 60px;
             height: 38px;
+            cursor: pointer;
         }
         .btn-nav span{
             display: block;
@@ -116,10 +150,14 @@
     </style>
 </head>
 <body>
-    
+    <section class="intro">
+        <img src="./images/logo.png" alt="logo">
+        <span>Share your mind</span>
+    </section>
     <div class="skip-menu">
         <a href="#header">본문 바로가기</a><a href="#footer">푸터 바로가기</a>
     </div>
+   
     <header class="header" id="header">
       <div class="container"> 
         <div class="logo"><a href="./index-pic.html"><img src="./images/logo-m.png" alt="Lizy-logo"></a></div>
