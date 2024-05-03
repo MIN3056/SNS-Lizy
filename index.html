@@ -3,17 +3,483 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    
     <title>Document</title>
+    <style>
+                @font-face {
+            font-family: noto sans kr;
+            src: url(../fonts/NotoSansKR.ttf);
+        }
+        @font-face {
+            font-family: pacifico;
+            src: url(../fonts/Pacifico.ttf);
+        }
+        :root{
+            font-family: noto sans kr;
+            --main-color:#a3cca3;
+            --back-color:#fff;
+            --point-color:#b5d692;
+            --gray222: #222;
+            --txt444: #444;
+            --gray666: #666;
+            --gray999: #999;
+            --grayaaa:#aaa;
+        }
+
+        .intro{
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;            
+            font-family: pacifico;
+            align-items: center;
+            animation: ani-show 1s 1.5s 1 alternate forwards;
+            opacity:1;
+            background: var(--back-color);
+            color: var(--main-color);
+        }
+        @keyframes ani-show{
+            0%{opacity: 1;}
+            100%{opacity:0;}
+        } 
+        .intro img{
+            width: 150px;
+        }
+        .skip-menu a{
+            position:fixed;
+            left:50%;
+            top:0;
+            transform:translate(-50%,-62px);
+            padding:1em 2em;
+        }
+        .skip-menu a:focus{
+            transform:translate(-50%,0);
+        }
+        .wrap{
+            opacity:0;
+            animation: ani-show 1s 1.5s 1 reverse forwards;
+        }
+        .header{
+            position: relative;
+        }
+        .header .container{
+            width: 100%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            padding-top: 10px;
+        }
+        .header span{
+            display: none;
+        }
+        .btn-nav{
+            margin: 5% 10%;
+            grid-area:1/1/2/2;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+        }
+        .btn-close{
+            display: none;
+            position: absolute;
+            top: 22%;
+            left: 30%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+        }
+        .logo{
+            grid-area:1/2/2/3;
+        }
+        .logo a{
+            position: absolute;
+            left: 43%;
+            right: 50%;
+            top: 5%;
+        }
+        .logo img{
+            width: 80px;
+            height: 80px;
+        }
+        .log-nav{
+            grid-area:1/3/2/-1;
+            position: absolute;
+            right: 2%;
+        }
+        .log-nav img{
+            width: 50px;
+            height: 50px;
+        }
+        .cate{
+            grid-area:2/1/3/-1;
+        }
+        .category{
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 2px solid var(--point-color);
+            padding: 30px 20px 0 20px;
+
+        }
+        .cate img{
+            width: 40px;
+            height: 40px;
+        }
+        .category .camera.active{
+            border: 1px solid var(--point-color);
+            border-style: dashed;
+            border-radius: 10%;
+            padding: 0 5px;
+        }
+
+        .btn-nav span{
+            display: block;
+            width: 100%;
+            height: 4px;
+            border-radius: 2px;
+            background: var(--main-color);
+            text-indent: -99999px;
+            margin-bottom: 10px;
+        }
+
+        .btn-close span{
+            display: block;
+            width: 100%;
+            height: 4px;
+            border-radius: 2px;
+            background: var(--main-color);
+            margin-bottom: 10px;
+            transform: rotate(45deg);
+        }
+        .btn-close span:last-child{
+            transform: rotate(-48deg) translateX(9px) translateY(-9px);
+        }
+
+        .par-main{
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 10px;
+            padding-top: 10px;
+            padding-bottom: 50px;
+        }
+        .main-nav{          
+            z-index: 2;
+            position: fixed;
+            display: flex;
+            width: 100%;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--back-color);
+            padding-left: 10px;
+        }
+
+        .main-nav span{
+            display: none;
+        }
+        .main-nav img{
+            width: 40px;
+            height: 40px;
+        }
+        .main-nav li{
+            margin:10px 0;
+        }
+        .item05 .write{
+            width: 40px;
+            height: 40px;
+        }
+        .item06{
+            display: none;
+        }
+
+
+        .location span{
+            font-size: 0.3em;
+        }  
+        ul.home-nav{
+            display: none;
+            position: absolute;
+            top: 92px;
+            bottom: 0;
+            width: 60vh;
+            height: 100vh;
+            z-index: 2;
+            background: var(--back-color);
+        }
+        .home-nav li{
+            border-bottom: 2px solid var(--point-color);
+            text-align: center;
+            margin-right: 2em;
+            margin-top: 1em;
+            margin-bottom: 1em;
+            align-items: center;
+        }
+        .home-nav li img{
+            width: 50px;
+            height: 50px;
+            
+        }
+
+        .btn-top{
+            z-index: 1;
+            position: fixed;
+            right: 5%;
+            bottom: 15%;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--main-color);
+            color: var(--back-color);
+            text-align: center;
+            line-height: 1em;
+            cursor: pointer;
+        }
+       
+        .search form{
+            display: flex;
+        }
+
+        .search input[type="text"]{
+            display: none;
+            border: transparent;
+            border-bottom: 2px solid var(--point-color);
+        
+        }
+        .search input[type="submit"]{
+            width: 40px;
+            height: 40px;
+            border: none;
+            background: url(./images/ico-search.png) no-repeat center;
+            background-size: contain;
+            color: transparent;
+            cursor: pointer;
+        }
+        .sec02{
+            order: 2;
+            border-top: 2px solid var(--point-color);
+            border-bottom: 2px solid var(--point-color);
+        }
+        .sec ul{
+            display: flex;
+            flex-flow: row wrap;
+        }
+        .sec02 .pic li{
+            width: 50%;
+        }
+        .sec02 ul li img{            
+            transition:0.3s;
+            transform: scale(1);
+        }
+        .sec02 ul li:hover img{
+            transform:scale(1.3);
+        }
+        .footer{
+            display: none;
+            color: var(--txt444);
+        }
+        .footer .container{
+            width: 100%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            padding-bottom: 100px;
+        }
+        
+        .footer h1{
+            margin-left: 1em;
+            font-family: 'pacifico';
+            font-size: 3em;
+            color: var(--main-color);
+        }
+        .footer-nav{
+            display: flex;
+            justify-content: space-between;
+            padding-top: 1em;
+        }
+        .footer select{
+            width: 100px;
+            height: 2.5em;
+            margin-top: 1em;
+            margin-left: 1em;
+        }
+        .footer address{
+            grid-area: 2/2/3/-1;
+        }
+        @media (min-width:960px){
+            .q-nav span{
+                display: inline;
+                color: var(--txt444);
+                font-size: 15px;
+            }
+            .q-nav img{
+                display: none;
+            }
+
+            .main-nav span{
+                display: block;
+            }
+            .search{
+                position: relative;
+            }
+            .item06{
+                display: block;
+            }
+            .search input{
+                position: absolute;
+                right: 10px;
+                bottom: 0;
+            }
+            .search input[type="text"]{   
+                display: block;
+            }
+            .search input[type="submit"]{
+                width: 40px;
+                height: 40px;
+            }
+          
+            .footer{
+                display: block;
+            }
+        }
+    </style>
+   
 </head>
 <body>
-   <header class="header">
-
-   </header> 
-   <section class="sec sec01"></section>
-   <section class="sec sec02"></section>
-   <section class="sec sec03"></section>
-   <footer class="footer">
-    
-   </footer>
+    <section class="intro">
+        <img src="./images/logo.png" alt="logo">
+        <span>Share your story</span>
+    </section>
+    <div class="skip-menu">
+        <a href="#header">본문 바로가기</a><a href="#footer">푸터 바로가기</a>
+    </div>
+    <section class="wrap">
+        <header class="header" id="header">
+            <div class="container">
+                <div class="logo"><a href="./index.html"><img src="./images/logo.png" alt="logo"></a></div>
+                <div class="btn-nav">
+                    <span></span>
+                    <span>네비버튼</span>
+                    <span></span>
+                </div>
+                <div class="btn-close"><span></span><span></span></div>
+                <div class="h-nav"></div>
+                <ul class="home-nav">
+                    <div class="location" id="location-nav"><span>홈 > 네비게이션</span></div>
+                    <li><h2>계정관리</h2></li>
+                    <li><img src="./images/ico-lock.png" alt="ico-lock">보안 및 내 계정관리</li>
+                    <li><img src="./images/ico-star.png" alt="ico-star">저장한 콘텐츠 관리</li>
+                    <li><img src="./images/ico-heart.png" alt="ico-heart">좋아요한 콘텐츠 관리</li>
+                    <li><img src="./images/ico-info.png" alt="ico-info">도움말 및 Q&A</li>
+                </ul>
+                <div class="log-nav">
+                    <ul class="q-nav">
+                        <li class="login"><a href="#"><img src="./images/ico-login.png" alt="login"><span>로그인</span></a></li>
+                        <li class="join"><a href="#"><span>회원가입</span></a></li>
+                    </ul>
+                </div>
+                <div class="cate">
+                    <ul class="category">
+                        <li class="camera active"><a href="./index.html"><img src="./images/ico-camera.png" alt="ico-camera"><span>사진</span></a></li>
+                        <li class="video"><a href="./video.html"><img src="./images/ico-video.png" alt="ico-video"><span>영상</span></a></li>
+                        <li class="text"><a href="./text.html"><img src="./images/ico-txt.png" alt="ico-txt"><span>글</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div class="par-main">
+            <ul class="main-nav">
+                <li class="item02 home"><a href="#"><img src="./images/ico-home.png" alt="ico-home"><span>홈</span></a></li>
+                <li class="item03 friends"><a href="#"><img src="./images/ico-friends.png" alt="ico-friends"><span>친구</span></a></li>
+                <li class="item05 write"><a href="#"><img src="./images/ico-write.png" alt="ico-write"><span>작성</span></a></li>
+                <li class="item04 messege"><a href="#"><img src="./images/ico-messenger.png" alt="ico-messenger"><span>메시지</span></a></li>
+                <li class="item06 setting"><a href="#"><img src="./images/ico-setting.png" alt="ico-setting"><span>설정</span></a></li>
+                <li class="item07 search">
+                    <form action="#">
+                        <input type="text" name="search-keyword" id="search-word" placeholder="검색어를 입력하세요">
+                        <input type="submit" value="검색">
+                    </form>
+                </li>
+            </ul>
+        </div>
+        <section class="sec sec01 location">
+            <div class="location" id="location-pic"><span>홈 > 사진</span></div>
+        </section>
+        <section class="sec sec02 picture" id="picture">
+            <ul class="pic">
+                <li>
+                    <div class="img-box"><img src="./images/img-pic01.jpg" alt="img-pic01"></div>
+                </li>
+                <li>
+                    <div class="img-box"><img src="./images/img-pic02.jpg" alt="img-pic02"></div>
+                </li>
+                <li>
+                    <div class="img-box"><img src="./images/img-pic03.jpg" alt="img-pic03"></div>
+                </li>
+                <li>
+                    <div class="img-box"><img src="./images/img-pic04.jpg" alt="img-pic04"></div>
+                </li>  
+                <li>
+                    <div class="img-box"><img src="./images/img-pic05.jpg" alt="img-pic05"></div>
+                </li>
+                <li>
+                    <div class="img-box"><img src="./images/img-pic06.jpg" alt="img-pic06"></div>
+                </li>
+                <li>
+                    <div class="img-box"><img src="./images/img-pic07.png" alt="img-pic07"></div>
+                </li>
+                <li>
+                    <div class="img-box"><img src="./images/img-pic08.jpg" alt="img-pic08"></div>
+                </li>
+            </ul>
+        </section>
+        <aside class="btn-top" id="btn-top"><a href="#header">^<br>TOP</a></aside>
+        <footer class="footer" id="footer">
+            <div class="container">
+                <div class="footer-logo">
+                    <h1><a href="./index.html">Lizy</a></h1>
+                </div>
+                <ul class="footer-nav">
+                    <li><a href="#">Lizy 소개</a></li>
+                    <li><a href="#">채용정보</a></li>
+                    <li><a href="#"><strong>개인정보처리방침</strong></a></li>
+                </ul>
+                <select name="언어" id="language">
+                    <option>한국어</option>
+                    <option>English</option>
+                    <option>日本語</option>
+                </select>
+                <address>
+                    소재지 : 대한민국 인천시 서구 원당대로 673 4층, 5층 (마전동 1057-6, 4층 5층)
+                    <br>Copyright © LIZY. All rights reserved.
+                </address>
+            </div>
+        </footer>
+    </section>
+    <script>
+        let btnNav = document.querySelector('.btn-nav');
+        let btnClose = document.querySelector('.btn-close')
+        let navEl = document.querySelector('.home-nav');
+        function fnCallNav(){
+            btnNav.onclick=function(){
+                navEl.style.display='block';
+                btnClose.style.display='block';
+            } 
+        }
+        fnCallNav();
+        function fnCloseNav(){
+            btnClose.onclick=function(){
+                navEl.style.display='none';
+                btnClose.style.display='none';
+            }
+        }
+        fnCloseNav();
+      
+    </script>
+   
 </body>
 </html>
