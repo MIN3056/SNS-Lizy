@@ -5,230 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
-    
+
     <title>Document</title>
     <style>
-                @font-face {
-            font-family: noto sans kr;
-            src: url(../fonts/NotoSansKR.ttf);
-        }
-        @font-face {
-            font-family: pacifico;
-            src: url(../fonts/Pacifico.ttf);
-        }
-        :root{
-            font-family: noto sans kr;
-            color: var(--txt444);
-            --main-color:#a3cca3;
-            --back-color:#fff;
-            --point-color:#b5d692;
-            --gray222: #222;
-            --txt444: #444;
-            --gray666: #666;
-            --gray999: #999;
-            --grayaaa:#aaa;
-        }
-
-        .intro{
-            position: fixed;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            display: flex;
-            justify-content: center;            
-            font-family: pacifico;
-            align-items: center;
-            animation: ani-show 1s 1.5s 1 alternate forwards;
-            opacity:1;
-            background: var(--back-color);
-            color: var(--main-color);
-        }
-        @keyframes ani-show{
-            0%{opacity: 1;}
-            100%{opacity:0;}
-        } 
-        .intro img{
-            width: 150px;
-        }
-        .skip-menu a{
-            position:fixed;
-            left:50%;
-            top:0;
-            transform:translate(-50%,-62px);
-            padding:1em 2em;
-        }
-        .skip-menu a:focus{
-            transform:translate(-50%,0);
-        }
-        .wrap{
-            opacity:0;
-            animation: ani-show 1s 1.5s 1 reverse forwards;
-        }
-        .header{
-            position: relative;
-        }
-        .header .container{
-            width: 100%;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 2fr 1fr;
-            padding-top: 10px;
-        }
-        .header span{
-            display: none;
-        }
-        .q-nav span{
-            display: inline;
-        }
-        .btn-nav{
-            margin: 5% 10%;
-            grid-area:1/1/2/2;
-            width: 50px;
-            height: 50px;
-            cursor: pointer;
-        }
-        .btn-close{
-            display: none;
-            position: absolute;
-            top: 22%;
-            left: 30%;
-            width: 50px;
-            height: 50px;
-            cursor: pointer;
-        }
-        .logo{
-            grid-area:1/2/2/3;
-        }
-        .logo a{
-            position: absolute;
-            left: 43%;
-            right: 50%;
-            top: 5%;
-        }
-        .logo img{
-            width: 80px;
-            height: 80px;
-        }
-        .log-nav{
-            font-size: 0.5em;
-            grid-area:1/3/2/-1;
-            position: absolute;
-            right: 2%;
-        }
-        .log-nav img{
-            width: 50px;
-            height: 50px;
-        }
-        .cate{
-            grid-area:2/1/3/-1;
-        }
-        .category{
-            display: flex;
-            justify-content: space-between;
-            border-bottom: 2px solid var(--point-color);
-            padding: 30px 20px 0 20px;
-
-        }
-        .cate img{
-            width: 40px;
-            height: 40px;
-        }
-        .category .camera.active{
+   
+        .main-nav .home.active{
             border: 1px solid var(--point-color);
             border-style: dashed;
             border-radius: 10%;
             padding: 0 5px;
         }
 
-        .btn-nav span{
-            display: block;
-            width: 100%;
-            height: 4px;
-            border-radius: 2px;
-            background: var(--main-color);
-            text-indent: -99999px;
-            margin-bottom: 10px;
-        }
-
-        .btn-close span{
-            display: block;
-            width: 100%;
-            height: 4px;
-            border-radius: 2px;
-            background: var(--main-color);
-            margin-bottom: 10px;
-            transform: rotate(45deg);
-        }
-        .btn-close span:last-child{
-            transform: rotate(-48deg) translateX(9px) translateY(-9px);
-        }
-
-        .par-main{
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 10px;
-            padding-top: 10px;
-            padding-bottom: 50px;
-        }
-        .main-nav{          
-            z-index: 2;
-            position: fixed;
-            display: flex;
-            width: 100%;
-            flex-flow: row nowrap;
-            justify-content: space-between;
-            align-items: center;
-            background: var(--back-color);
-            padding-left: 10px;
-        }
-
-        .main-nav span{
-            display: none;
-        }
-        .main-nav img{
-            width: 40px;
-            height: 40px;
-        }
-        .main-nav li{
-            margin:10px 0;
-        }
-        .item05 .write{
-            width: 40px;
-            height: 40px;
-        }
-        .item06{
-            display: none;
-        }
-
-
-        .location span{
-            font-size: 0.3em;
-        }  
-        ul.home-nav{
-            display: none;
-            position: absolute;
-            top: 92px;
-            bottom: 0;
-            width: 60vh;
-            height: 100vh;
-            z-index: 2;
-            background: var(--back-color);
-        }
-        .home-nav li{
-            border-bottom: 2px solid var(--point-color);
-            text-align: center;
-            margin-right: 2em;
-            margin-top: 1em;
-            margin-bottom: 1em;
-            align-items: center;
-        }
-        .home-nav li img{
-            width: 50px;
-            height: 50px;
-            
-        }
 
         .btn-top{
             z-index: 1;
@@ -299,50 +86,17 @@
         .sec03 .pic li{
             width: 50%;
         }
-       .footer{
-            display: none;
-            color: var(--txt444);
-        }
-        .footer .container{
-            width: 100%;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 2fr 1fr;
-            padding-bottom: 100px;
-        }
-        
-        .footer h1{
-            margin-left: 1em;
-            font-family: 'pacifico';
-            font-size: 3em;
-            color: var(--main-color);
-        }
-        .footer-nav{
-            display: flex;
-            justify-content: space-between;
-            padding-top: 1em;
-        }
-        .footer select{
-            width: 100px;
-            height: 2.5em;
-            margin-top: 1em;
-            margin-left: 1em;
-        }
-        .footer address{
-            grid-area: 2/2/3/-1;
-        }
+        .q-nav span{
+                display: block;
+                color: var(--txt444);
+                font-size: 12px;
+            }
 
         @media (min-width:960px){
            
             .q-nav span{
-                display: inline;
-                color: var(--txt444);
                 font-size: 15px;
             }
-            .q-nav img{
-                display: none;
-            }
-
             .main-nav span{
                 display: block;
             }
@@ -389,12 +143,14 @@
             <div class="container">
                 <div class="logo"><a href="./index.html"><img src="./images/logo.png" alt="logo"></a></div>
                 <div class="btn-nav">
-                    <span></span>
-                    <span>네비버튼</span>
-                    <span></span>
+                    <div class="btnspan">
+                        <span></span>
+                        <span>네비버튼</span>
+                        <span></span>
+                    </div>
+                    
                 </div>
                 <div class="btn-close"><span></span><span></span></div>
-                <div class="h-nav"></div>
                 <ul class="home-nav">
                     <div class="location" id="location-nav"><span>홈 > 네비게이션</span></div>
                     <li><h2>계정관리</h2></li>
@@ -420,8 +176,8 @@
         </header>
         <div class="par-main">
             <ul class="main-nav">
-                <li class="item02 home"><a href="#"><img src="./images/ico-home.png" alt="ico-home"><span>홈</span></a></li>
-                <li class="item03 friends"><a href="#"><img src="./images/ico-friends.png" alt="ico-friends"><span>친구</span></a></li>
+                <li class="item02 home active"><a href="./home.html"><img src="./images/ico-home.png" alt="ico-home"><span>홈</span></a></li>
+                <li class="item03 friends"><a href="./friends.html"><img src="./images/ico-friends.png" alt="ico-friends"><span>친구</span></a></li>
                 <li class="item05 write"><a href="#"><img src="./images/ico-write.png" alt="ico-write"><span>작성</span></a></li>
                 <li class="item04 messege"><a href="#"><img src="./images/ico-messenger.png" alt="ico-messenger"><span>메시지</span></a></li>
                 <li class="item06 setting"><a href="#"><img src="./images/ico-setting.png" alt="ico-setting"><span>설정</span></a></li>
@@ -500,24 +256,31 @@
         </footer>
     </section>
     <script>
+        
         let btnNav = document.querySelector('.btn-nav');
         let btnClose = document.querySelector('.btn-close')
         let navEl = document.querySelector('.home-nav');
+        let btnSp = document.querySelector('.btnspan');
+
         function fnCallNav(){
             btnNav.onclick=function(){
                 navEl.style.display='block';
-                btnClose.style.display='block';
+                btnClose.style.display='block';                
+                btnSp.style.display='none';
             } 
-        }
+        }        
         fnCallNav();
+
         function fnCloseNav(){
             btnClose.onclick=function(){
                 navEl.style.display='none';
                 btnClose.style.display='none';
+                btnSp.style.display='block';
             }
-        }
+        }       
+
         fnCloseNav();
-      
+
     </script>
    
 </body>
