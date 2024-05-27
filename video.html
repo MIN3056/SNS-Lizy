@@ -79,55 +79,51 @@
             justify-content: center;
             color: var(--point-color, var(--point-color));
         }
-  
- 
         @media (min-width:960px){
-            .q-nav div{
-                display: inline;
-                color: var(--txt444);
-                font-size: 15px;
-            }
-            .q-nav img{
-                display: none;
-            }
+            .header .log-nav span{
+        display: block;
+        color: var(--txt444);
+        font-size: 15px;
+    }
+    .q-nav img{
+        display: none;
+    }
 
-            .main-nav div{
-                display: block;
-            }
-            .search{
-                position: relative;
-            }
-            .item06{
-                display: block;
-            }
-            .search input{
-                position: absolute;
-                right: 10px;
-                bottom: 0;
-            }
-            .search input[type="text"]{   
-                display: block;
-                width: 120px;
-                font-size: 0.5em;
-            }
-            .search input[type="submit"]{
-                width: 40px;
-                height: 40px;
-            }
-           .sec02 .pic li img{
-                display: flex;
-           }
-           .footer{
-                display: block;
-            }
-        }
+    .main-nav span{
+        display: block;
+    }
+    .search{
+        position: relative;
+    }
+    .item06{
+        display: block;
+    }
+    .search input{
+        position: absolute;
+        right: 10px;
+        bottom: 0;
+    }
+    .search input[type="text"]{   
+        display: block;
+        width: 120px;
+        font-size: 0.5em;
+    }
+    .search input[type="submit"]{
+        width: 40px;
+        height: 40px;
+    }
+  
+    .footer{
+        display: block;
+    }
+}
     </style>
    
 </head>
 <body>
     <section class="intro">
         <img src="./images/logo.png" alt="logo">
-        <div>Share your story</div>
+        <span>Share your story</span>
     </section>
     <div class="skip-menu">
         <a href="#header">본문 바로가기</a><a href="#footer">푸터 바로가기</a>
@@ -137,15 +133,16 @@
             <div class="container">
                 <div class="logo"><a href="./index.html"><img src="./images/logo.png" alt="logo"></a></div>
                 <div class="btn-nav">
-                    <div class="btndiv">
-                        <div></div>
-                        <div>네비버튼</div>
-                        <div></div>
+                    <div class="btnspan">
+                        <span></span>
+                        <span>네비버튼</span>
+                        <span></span>
                     </div>
                 </div>
-                <div class="btn-close"><div></div><div></div></div>
-                <ul class="home-nav active">
-                    <div class="location" id="location-nav"><div>홈 > 네비게이션</div></div>
+                <div class="btn-close"><span></span><span></span></div>
+                <div class="h-nav"></div>
+                <ul class="home-nav">
+                    <div class="location" id="location-nav"><span>홈 > 네비게이션</span></div>
                     <li><h2>계정관리</h2></li>
                     <li><img src="./images/ico-lock.png" alt="ico-lock">보안 및 내 계정관리</li>
                     <li><img src="./images/ico-star.png" alt="ico-star">저장한 콘텐츠 관리</li>
@@ -154,26 +151,26 @@
                 </ul>
                 <div class="log-nav">
                     <ul class="q-nav">
-                        <li class="login"><a href="./login.html"><img src="./images/ico-login.png" alt="login"><div>로그인</div></a></li>
-                        <li class="join"><a href="#"><div>회원가입</div></a></li>
+                        <li class="login"><a href="./login.html"><img src="./images/ico-login.png" alt="login"><span>로그인</span></a></li>
+                        <li class="join"><a href="#"><span>회원가입</span></a></li>
                     </ul>
                 </div>
                 <div class="cate">
                     <ul class="category">
-                        <li class="camera"><a href="./index.html"><img src="./images/ico-camera.png" alt="ico-camera"><div>사진</div></a></li>
-                        <li class="video active"><a href="./video.html"><img src="./images/ico-video.png" alt="ico-video"><div>영상</div></a></li>
-                        <li class="text"><a href="./text.html"><img src="./images/ico-txt.png" alt="ico-txt"><div>글</div></a></li>
+                        <li class="camera active"><a href="./index.html"><img src="./images/ico-camera.png" alt="ico-camera"><span>사진</span></a></li>
+                        <li class="video"><a href="./video.html"><img src="./images/ico-video.png" alt="ico-video"><span>영상</span></a></li>
+                        <li class="text"><a href="./text.html"><img src="./images/ico-txt.png" alt="ico-txt"><span>글</span></a></li>
                     </ul>
                 </div>
             </div>
         </header>
         <div class="par-main">
             <ul class="main-nav">
-                <li class="item02 home"><a href="./home.html"><img src="./images/ico-home.png" alt="ico-home"><div>홈</div></a></li>
-                <li class="item03 friends"><a href="./friends.html"><img src="./images/ico-friends.png" alt="ico-friends"><div>친구</div></a></li>
-                <li class="item05 write"><a href="#"><img src="./images/ico-write.png" alt="ico-write"><div>작성</div></a></li>
-                <li class="item04 messege"><a href="#"><img src="./images/ico-messenger.png" alt="ico-messenger"><div>메시지</div></a></li>
-                <li class="item06 setting"><a href="#"><img src="./images/ico-setting.png" alt="ico-setting"><div>설정</div></a></li>
+                <li class="item02 home"><a href="./home.html"><img src="./images/ico-home.png" alt="ico-home"><span>홈</span></a></li>
+                <li class="item03 friends"><a href="./friends.html"><img src="./images/ico-friends.png" alt="ico-friends"><span>친구</span></a></li>
+                <li class="item05 write"><a href="#"><img src="./images/ico-write.png" alt="ico-write"><span>작성</span></a></li>
+                <li class="item04 messege"><a href="#"><img src="./images/ico-messenger.png" alt="ico-messenger"><span>메시지</span></a></li>
+                <li class="item06 setting"><a href="#"><img src="./images/ico-setting.png" alt="ico-setting"><span>설정</span></a></li>
                 <li class="item07 search">
                     <form action="#">
                         <input type="text" name="search-keyword" id="search-word" placeholder="검색어를 입력하세요">
@@ -183,7 +180,7 @@
             </ul>
         </div>
         <section class="sec sec01 location">
-            <div class="location" id="location-vid"><div>홈 > 영상</div></div>
+            <div class="location" id="location-vid"><span>홈 > 영상</span></div>
         </section>
         <section class="sec sec02 video" id="video">
             <div class="swiper">
@@ -224,7 +221,7 @@
         let btnNav = document.querySelector('.btn-nav');
         let btnClose = document.querySelector('.btn-close')
         let navEl = document.querySelector('.home-nav');
-        let btnSp = document.querySelector('.btndiv');
+        let btnSp = document.querySelector('.btnspan');
 
         function fnCallNav(){
             btnNav.onclick=function(){

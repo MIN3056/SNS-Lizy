@@ -86,7 +86,7 @@
         .sec03 .pic li{
             width: 50%;
         }
-        .q-nav div{
+        .q-nav span{
                 display: block;
                 color: var(--txt444);
                 font-size: 12px;
@@ -94,10 +94,10 @@
 
         @media (min-width:960px){
            
-            .q-nav div{
+            .q-nav span{
                 font-size: 15px;
             }
-            .main-nav div{
+            .main-nav span{
                 display: block;
             }
             .search{
@@ -133,7 +133,7 @@
 <body>
     <section class="intro">
         <img src="./images/logo.png" alt="logo">
-        <div>Share your story</div>
+        <span>Share your story</span>
     </section>
     <div class="skip-menu">
         <a href="#header">본문 바로가기</a><a href="#footer">푸터 바로가기</a>
@@ -143,11 +143,11 @@
             <div class="container">
                 <div class="logo"><a href="./index.html"><img src="./images/logo.png" alt="logo"></a></div>
                 <div class="btn-nav">
-                    <div class="btndiv">
-                        <div></div>
-                        <div>네비버튼</div>
-                        <div></div>
-                    </div>
+                    <div class="btnspan">
+                        <span></span>
+                        <span>네비버튼</span>
+                        <span></span>
+                    </span>
                     
                 </div>
                 <div class="btn-close"><div></div><div></div></div>
@@ -260,7 +260,7 @@
         let btnNav = document.querySelector('.btn-nav');
         let btnClose = document.querySelector('.btn-close')
         let navEl = document.querySelector('.home-nav');
-        let btnSp = document.querySelector('.btndiv');
+        let btnSp = document.querySelector('.btnspan');
 
         function fnCallNav(){
             btnNav.onclick=function(){

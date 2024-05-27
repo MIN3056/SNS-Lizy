@@ -64,7 +64,8 @@
     grid-template-columns: 1fr 2fr 1fr;
     padding-top: 10px;
 }
-.header div{
+.header .log-nav span,
+.header .category span{
     display: none;
 }
 .btn-nav{
@@ -110,19 +111,21 @@
 
 .cate{
     grid-area:2/1/3/-1;
+    border-bottom: 2px solid var(--point-color);
+
 }
 .category{
     display: flex;
     justify-content: space-between;
-    border-bottom: 2px solid var(--point-color);
     padding: 30px 20px 0 20px;
+    column-gap: 20px;
 
 }
 .cate img{
     width: 40px;
     height: 40px;
 }
-.btn-nav div{
+.btn-nav span{
     display: block;
     width: 100%;
     height: 4px;
@@ -132,7 +135,7 @@
     margin-bottom: 10px;
 }
 
-.btn-close div{
+.btn-close span{
     display: block;
     width: 100%;
     height: 4px;
@@ -141,7 +144,7 @@
     margin-bottom: 10px;
     transform: rotate(45deg);
 }
-.btn-close div:last-child{
+.btn-close span:last-child{
     transform: rotate(-48deg) translateX(9px) translateY(-9px);
 }
 
@@ -165,7 +168,7 @@
     padding-left: 10px;
 }
 
-.main-nav div{
+.main-nav span{
     display: none;
 }
 .main-nav img{
@@ -184,7 +187,7 @@
 }
 
 
-.location div{
+.location span{
     font-size: 0.3em;
 }  
 ul.home-nav{
