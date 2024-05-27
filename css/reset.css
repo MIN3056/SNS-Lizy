@@ -1,11 +1,11 @@
 
 html,head,body,h1,h2,h3,h4,h5,h6,p,img,a,ul,ol,li,
-form,input,label,select,textarea,div,span,fieldset,
+form,input,label,select,textarea,div,div,fieldset,
 legend,picture,video,audio,option,optgroup,button,
 strong,em,header,section,footer,aside,article,main,
 hr,br,address,table,thead,tbody,tfoot,tr,th,td,figure{
     box-sizing:border-box;
-    margin:0;
+    margin:0 auto;
     padding:0;
 }
 img{

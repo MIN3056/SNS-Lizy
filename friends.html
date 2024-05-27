@@ -20,8 +20,6 @@
             border-radius: 10%;
             padding: 0 5px;
         }
-
-   
         
         .search form{
             display: flex;
@@ -57,35 +55,21 @@
         border-bottom: 2px solid var(--point-color);
        }
         
-        .swiper-slide{
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            border-bottom: 2px solid var(--point-color);
-            gap: 1em;
-        }
-      
+
         h3{
             grid-area: 1/1/-1/-1;
         }
-        .swiper-slide .friends{
-            display: flex;
-            margin: 1em 2em;
+        .swiper-wrapper{
+            border-bottom: 1px solid var(--point-color);
         }
-        .swiper-slide .friends .fri{
-            margin-right: 2em ;
-        }
-
         .swiper-slide p{
             font-family: pacifico;
         }
 
         .swiper-button-next, .swiper-button-prev{
-            display: none;
             color: var(--point-color);
         }
-        .swiper-scrollbar-drag{
-            background: var(--point-color);
-        }
+     
        
         @media (min-width:400px){
             .sec02 img{
@@ -108,7 +92,7 @@
      
         @media (min-width:960px){
            
-            .q-nav span{
+            .q-nav div{
                 display: inline;
                 color: var(--txt444);
                 font-size: 15px;
@@ -117,7 +101,7 @@
                 display: none;
             }
 
-            .main-nav span{
+            .main-nav div{
                 display: block;
             }
             .search{
@@ -140,9 +124,7 @@
                 width: 40px;
                 height: 40px;
             }
-            .swiper-button-next, .swiper-button-prev{
-                display: block;
-            }
+            
             .sec02 img{
                 width: 100px;
                 height: 100px;
@@ -157,7 +139,7 @@
 <body>
     <section class="intro">
         <img src="./images/logo.png" alt="logo">
-        <span>Share your story</span>
+        <div>Share your story</div>
     </section>
     <div class="skip-menu">
         <a href="#header">본문 바로가기</a><a href="#footer">푸터 바로가기</a>
@@ -167,16 +149,16 @@
             <div class="container">
                 <div class="logo"><a href="./index.html"><img src="./images/logo.png" alt="logo"></a></div>
                 <div class="btn-nav">
-                    <div class="btnspan">
-                        <span></span>
-                        <span>네비버튼</span>
-                        <span></span>
+                    <div class="btndiv">
+                        <div></div>
+                        <div>네비버튼</div>
+                        <div></div>
                     </div>
                 </div>
-                <div class="btn-close"><span></span><span></span></div>
+                <div class="btn-close"><div></div><div></div></div>
                 <div class="h-nav"></div>
                 <ul class="home-nav">
-                    <div class="location" id="location-nav"><span>홈 > 네비게이션</span></div>
+                    <div class="location" id="location-nav"><div>홈 > 네비게이션</div></div>
                     <li><h2>계정관리</h2></li>
                     <li><img src="./images/ico-lock.png" alt="ico-lock">보안 및 내 계정관리</li>
                     <li><img src="./images/ico-star.png" alt="ico-star">저장한 콘텐츠 관리</li>
@@ -185,26 +167,26 @@
                 </ul>
                 <div class="log-nav">
                     <ul class="q-nav">
-                        <li class="login"><a href="./home.html"><img src="./images/img-fri12.png" alt="profile"><span>로그아웃</span></a></li>
-                        <li class="join"><a href="#"><span>회원가입</span></a></li>
+                        <li class="login"><a href="./home.html"><img src="./images/img-fri12.png" alt="profile"><div>로그아웃</div></a></li>
+                        <li class="join"><a href="#"><div>회원가입</div></a></li>
                     </ul>
                 </div>
                 <div class="cate">
                     <ul class="category">
-                        <li class="camera"><a href="./index.html"><img src="./images/ico-camera.png" alt="ico-camera"><span>사진</span></a></li>
-                        <li class="video"><a href="./video.html"><img src="./images/ico-video.png" alt="ico-video"><span>영상</span></a></li>
-                        <li class="text"><a href="./text.html"><img src="./images/ico-txt.png" alt="ico-txt"><span>글</span></a></li>
+                        <li class="camera"><a href="./index.html"><img src="./images/ico-camera.png" alt="ico-camera"><div>사진</div></a></li>
+                        <li class="video"><a href="./video.html"><img src="./images/ico-video.png" alt="ico-video"><div>영상</div></a></li>
+                        <li class="text"><a href="./text.html"><img src="./images/ico-txt.png" alt="ico-txt"><div>글</div></a></li>
                     </ul>
                 </div>
             </div>
         </header>
         <div class="par-main">
             <ul class="main-nav">
-                <li class="item02 home"><a href="./home.html"><img src="./images/ico-home.png" alt="ico-home"><span>홈</span></a></li>
-                <li class="item03 friends active"><a href="./friends.html"><img src="./images/ico-friends.png" alt="ico-friends"><span>친구</span></a></li>
-                <li class="item05 write"><a href="#"><img src="./images/ico-write.png" alt="ico-write"><span>작성</span></a></li>
-                <li class="item04 messege"><a href="#"><img src="./images/ico-messenger.png" alt="ico-messenger"><span>메시지</span></a></li>
-                <li class="item06 setting"><a href="#"><img src="./images/ico-setting.png" alt="ico-setting"><span>설정</span></a></li>
+                <li class="item02 home"><a href="./home.html"><img src="./images/ico-home.png" alt="ico-home"><div>홈</div></a></li>
+                <li class="item03 friends active"><a href="./friends.html"><img src="./images/ico-friends.png" alt="ico-friends"><div>친구</div></a></li>
+                <li class="item05 write"><a href="#"><img src="./images/ico-write.png" alt="ico-write"><div>작성</div></a></li>
+                <li class="item04 messege"><a href="#"><img src="./images/ico-messenger.png" alt="ico-messenger"><div>메시지</div></a></li>
+                <li class="item06 setting"><a href="#"><img src="./images/ico-setting.png" alt="ico-setting"><div>설정</div></a></li>
                 <li class="item07 search">
                     <form action="#">
                         <input type="text" name="search-keyword" id="search-word" placeholder="검색어를 입력하세요">
@@ -214,7 +196,7 @@
             </ul>
         </div>
         <section class="sec sec01 location">
-            <div class="location" id="location-fri"><span>홈 > 친구 관리</span></div>
+            <div class="location" id="location-fri"><div>홈 > 친구 관리</div></div>
         </section>
         <section class="sec sec02 friend" id="friends">
            <div class="container">
@@ -223,45 +205,63 @@
             </div>
                 <div class="friend-list">
                     <!-- Slider main container -->
-                    <div class="swiper">
+                    <div class="swiper"> 
+                        <h3>친구 목록</h3>
                         <!-- Additional required wrapper -->
                         <div class="swiper-wrapper">
                             <!-- Slides -->                                
-                            
-
                             <div class="swiper-slide">
-                                <h3>친구 목록</h3>
-                                <div class="friends">
                                     <div class="fri fri01">
                                         <img src="./images/img-fri04.png" alt="img-fri04">
                                         <p>Jane</p>
                                     </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="fri fri02">
+                                    <img src="./images/img-fri05.png" alt="img-fri05">
+                                    <p>Michel</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="fri fri03">
+                                    <img src="./images/img-fri06.png" alt="img-fri06">
+                                    <p>Tomson</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="fri fri01">
+                                    <img src="./images/img-fri04.png" alt="img-fri04">
+                                    <p>Jane</p>
+                                </div>
+                            </div>
+                                <div class="swiper-slide">
                                     <div class="fri fri02">
                                         <img src="./images/img-fri05.png" alt="img-fri05">
                                         <p>Michel</p>
                                     </div>
+                                </div>
+                                <div class="swiper-slide">
                                     <div class="fri fri03">
                                         <img src="./images/img-fri06.png" alt="img-fri06">
                                         <p>Tomson</p>
                                     </div>
                                 </div>
+                            <div class="swiper-slide">
+                                <div class="fri fri01">
+                                    <img src="./images/img-fri04.png" alt="img-fri04">
+                                    <p>Jane</p>
+                                </div>
                             </div>
                             <div class="swiper-slide">
-                                <h3>친구 목록</h3>
-
-                                <div class="friends">
-                                    <div class="fri fri01">
-                                        <img src="./images/img-fri04.png" alt="img-fri04">
-                                        <p>Jane</p>
-                                    </div>
-                                    <div class="fri fri02">
-                                        <img src="./images/img-fri05.png" alt="img-fri05">
-                                        <p>Michel</p>
-                                    </div>
-                                    <div class="fri fri03">
-                                        <img src="./images/img-fri06.png" alt="img-fri06">
-                                        <p>Tomson</p>
-                                    </div>
+                                <div class="fri fri02">
+                                    <img src="./images/img-fri05.png" alt="img-fri05">
+                                    <p>Michel</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="fri fri03">
+                                    <img src="./images/img-fri06.png" alt="img-fri06">
+                                    <p>Tomson</p>
                                 </div>
                             </div>
                         </div>
@@ -270,118 +270,148 @@
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-button-next"></div>
                     
-                        <!-- If we need scrollbar -->
-                        <div class="swiper-scrollbar"></div>
                     </div>
                 </div>
                 <div class="follow-list">
                     <!-- Slider main container -->
                     <div class="swiper">
+                        <h3>팔로우 요청 목록</h3>
+
                         <!-- Additional required wrapper -->
                         <div class="swiper-wrapper">
                             <!-- Slides -->        
 
-                            <div class="swiper-slide">
-                                <h3>팔로우 요청 목록</h3>
-
-                                <div class="friends">                          
-                                    <div class="fri fri07">
-                                        <img src="./images/img-fri07.png" alt="img-fri07">
-                                        <p>Christian</p>
-                                    </div>
-                                    <div class="fri fri08">
-                                        <img src="./images/img-fri08.png" alt="img-fri08">
-                                        <p>Minji</p>
-                                    </div>
-                                    <div class="fri fri09">
-                                        <img src="./images/img-fri09.png" alt="img-fri09">
-                                        <p>Xian</p>
-                                    </div>
-                                </div>  
+                            <div class="swiper-slide">                  
+                                <div class="fri fri07">
+                                    <img src="./images/img-fri07.png" alt="img-fri07">
+                                    <p>Christian</p>
+                                </div>
                             </div>
                             <div class="swiper-slide">
-                                <h3>팔로우 요청 목록</h3>
-
-                                <div class="friends">
-                                    <div class="fri fri07">
-                                        <img src="./images/img-fri07.png" alt="img-fri07">
-                                        <p>Christian</p>
-                                    </div>
-                                    <div class="fri fri08">
-                                        <img src="./images/img-fri08.png" alt="img-fri08">
-                                        <p>Minji</p>
-                                    </div>
-                                    <div class="fri fri09">
-                                        <img src="./images/img-fri09.png" alt="img-fri09">
-                                        <p>Xian</p>
-                                    </div>
+                                <div class="fri fri08">
+                                    <img src="./images/img-fri08.png" alt="img-fri08">
+                                    <p>Minji</p>
+                                </div>
+                            </div>    
+                            <div class="swiper-slide">
+                                <div class="fri fri09">
+                                    <img src="./images/img-fri09.png" alt="img-fri09">
+                                    <p>Xian</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">                  
+                                <div class="fri fri07">
+                                    <img src="./images/img-fri07.png" alt="img-fri07">
+                                    <p>Christian</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="fri fri08">
+                                    <img src="./images/img-fri08.png" alt="img-fri08">
+                                    <p>Minji</p>
+                                </div>
+                            </div>    
+                            <div class="swiper-slide">
+                                <div class="fri fri09">
+                                    <img src="./images/img-fri09.png" alt="img-fri09">
+                                    <p>Xian</p>
+                                </div>
+                            </div>    
+                            <div class="swiper-slide">                  
+                                <div class="fri fri07">
+                                    <img src="./images/img-fri07.png" alt="img-fri07">
+                                    <p>Christian</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="fri fri08">
+                                    <img src="./images/img-fri08.png" alt="img-fri08">
+                                    <p>Minji</p>
+                                </div>
+                            </div>    
+                            <div class="swiper-slide">
+                                <div class="fri fri09">
+                                    <img src="./images/img-fri09.png" alt="img-fri09">
+                                    <p>Xian</p>
                                 </div>
                             </div>
                         
                         </div>
-                
-                    
                         <!-- If we need navigation buttons -->
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-button-next"></div>
                     
-                        <!-- If we need scrollbar -->
-                        <div class="swiper-scrollbar"></div>
+                        
                     </div>
                 </div>
                 <div class="recommend-list">
                     <!-- Slider main container -->
                     <div class="swiper">
+                        <h3>친구 추천/알 수도 있는 친구</h3>
                         <!-- Additional required wrapper -->
                         <div class="swiper-wrapper">
                             <!-- Slides -->                                
-
-                            <div class="swiper-slide slide03">
-                                <h3>친구 추천/알 수도 있는 친구</h3>
-
-                                <div class="friends">
-                                    <div class="fri fri10">
-                                        <img src="./images/img-fri09.png" alt="img-fri10">
-                                        <p>Zion</p>
-                                    </div>
-                                    <div class="fri fri011">
-                                        <img src="./images/img-fri10.png" alt="img-fri11">
-                                        <p>Sigma</p>
-                                    </div>
-                                    <div class="fri fri12">
-                                        <img src="./images/img-fri11.png" alt="img-fri12">
-                                        <p>Yujin</p>
-                                    </div>
+                            <div class="swiper-slide">
+                               <div class="fri fri10">
+                                    <img src="./images/img-fri09.png" alt="img-fri10">
+                                    <p>Zion</p>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <h3>친구 추천/알 수도 있는 친구</h3>
-
-                                <div class="friends">
-                                    <div class="fri fri10">
-                                        <img src="./images/img-fri09.png" alt="img-fri10">
-                                        <p>Zion</p>
-                                    </div>
-                                    <div class="fri fri011">
-                                        <img src="./images/img-fri10.png" alt="img-fri11">
-                                        <p>Sigma</p>
-                                    </div>
-                                    <div class="fri fri12">
-                                        <img src="./images/img-fri11.png" alt="img-fri12">
-                                        <p>Yujin</p>
-                                    </div>
-                                    
+                                <div class="fri fri011">
+                                    <img src="./images/img-fri10.png" alt="img-fri11">
+                                    <p>Sigma</p>
                                 </div>
                             </div>
-                            
+                            <div class="swiper-slide">
+                                <div class="fri fri12">
+                                    <img src="./images/img-fri11.png" alt="img-fri12">
+                                    <p>Yujin</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="fri fri10">
+                                     <img src="./images/img-fri09.png" alt="img-fri10">
+                                     <p>Zion</p>
+                                 </div>
+                             </div>
+                             <div class="swiper-slide">
+                                 <div class="fri fri011">
+                                     <img src="./images/img-fri10.png" alt="img-fri11">
+                                     <p>Sigma</p>
+                                 </div>
+                             </div>
+                             <div class="swiper-slide">
+                                 <div class="fri fri12">
+                                     <img src="./images/img-fri11.png" alt="img-fri12">
+                                     <p>Yujin</p>
+                                 </div>
+                             </div>
+                             <div class="swiper-slide">
+                                <div class="fri fri10">
+                                     <img src="./images/img-fri09.png" alt="img-fri10">
+                                     <p>Zion</p>
+                                 </div>
+                             </div>
+                             <div class="swiper-slide">
+                                 <div class="fri fri011">
+                                     <img src="./images/img-fri10.png" alt="img-fri11">
+                                     <p>Sigma</p>
+                                 </div>
+                             </div>
+                             <div class="swiper-slide">
+                                 <div class="fri fri12">
+                                     <img src="./images/img-fri11.png" alt="img-fri12">
+                                     <p>Yujin</p>
+                                 </div>
+                             </div>
                         </div>
                     
                         <!-- If we need navigation buttons -->
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-button-next"></div>
                     
-                        <!-- If we need scrollbar -->
-                        <div class="swiper-scrollbar"></div>
+                     
                     </div>
                 </div>
            </div>
@@ -414,7 +444,7 @@
         let btnNav = document.querySelector('.btn-nav');
         let btnClose = document.querySelector('.btn-close')
         let navEl = document.querySelector('.home-nav');
-        let btnSp = document.querySelector('.btnspan');
+        let btnSp = document.querySelector('.btndiv');
 
         function fnCallNav(){
             btnNav.onclick=function(){
@@ -436,17 +466,28 @@
         fnCloseNav();
 
         const swiper = new Swiper('.swiper', {
-
+            // breakpoints
+            breakpoints: {
+                340: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+                },
+                768: {
+                slidesPerView: 4,
+                spaceBetween: 40,
+                },
+                1024: {
+                slidesPerView: 5,
+                spaceBetween: 50,
+                },
+            },
             // Navigation arrows
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
 
-            // And if we need scrollbar
-            scrollbar: {
-                el: '.swiper-scrollbar',
-            },
+        
         });
       
     </script>
